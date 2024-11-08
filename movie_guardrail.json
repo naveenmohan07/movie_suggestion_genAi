@@ -1,0 +1,26 @@
+{
+    "input": {
+      "type": "string",
+      "name": "prompt",
+      "description": "User's question or message",
+      "required": true
+    },
+    "output": {
+      "type": "string",
+      "name": "answer",
+      "required": true,
+      "description": "Response to the user's question or message."
+    },
+    "guard": {
+      "validate": {
+        "movie_related": true,
+        "on": "prompt"
+      },
+      "fallback": {
+        "message": "I'm only here to answer movie-related questions."
+      }
+    },
+    "id": "movie_question_guard",
+    "name": "MovieGuardrail"
+  }
+  
